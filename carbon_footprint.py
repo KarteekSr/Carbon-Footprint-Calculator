@@ -284,7 +284,7 @@ class Main(object):
         if self._active_frame == self._length_index - 1:
             # If the active frame is the second last frame, the next frame is the last frame, so we need to set the text of the button
             # to Calculate
-            self._next_button.configure(text="Calculate", command=self.calculate_carbon_footprint)
+            self._next_button.configure(text="Calculate", command=self._calculate_carbon_footprint)
         self._active_frame += 1
         frame = self._all_frames[self._active_frame]    # The current new frame
         self._show_frame(frame)
@@ -301,7 +301,7 @@ class Main(object):
             self._active_frame -= 1
         self._show_frame(self._all_frames[self._active_frame])
     
-    def calculate_carbon_footprint(self):
+    def _calculate_carbon_footprint(self):
         """Calculate the new carbon footprint and create a new screen"""
         
         selected_items = []    # This will help in calculating carbon footprint
