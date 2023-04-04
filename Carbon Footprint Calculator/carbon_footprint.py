@@ -30,7 +30,7 @@ class SpinBoxModern(customtkinter.CTkFrame):
                  height: int = 32,
                  from_: int, to: int,
                  starting_num: int|None = None,
-                 **kwargs):
+                 **kwargs) -> None:
         """Initialize the object by defining important variables
 
         Args:
@@ -170,7 +170,7 @@ class CheckBoxFrame(UniversalFrame):
         """Get the value of the checkboxes by a list of bools
 
         Returns:
-            list[bool]: List of bools in the order od the `options` argument. True if checked and False if unchecked
+            list[bool]: List of bools in the order of the `options` argument. True if checked and False if unchecked
         """
         state_of_checkbox = []
         for checkbox in self._checkboxes:
@@ -301,7 +301,7 @@ class Main(object):
             self._active_frame -= 1
         self._show_frame(self._all_frames[self._active_frame])
     
-    def _calculate_carbon_footprint(self):
+    def _calculate_carbon_footprint(self) -> None:
         """Calculate the new carbon footprint and create a new screen"""
         
         selected_items = []    # This will help in calculating carbon footprint
@@ -411,8 +411,7 @@ class Main(object):
         """Shows the frame passed in the argument
 
         Args:
-            frame (customtkinter.CTkFrame): The frame to be shown
-        """
+            frame (customtkinter.CTkFrame): The frame to be shown"""
         frame.tkraise()
         
     def run(self) -> None:
