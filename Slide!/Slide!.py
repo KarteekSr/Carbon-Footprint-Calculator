@@ -1,4 +1,4 @@
-"""The sliding game. The user has to arrange the tiles in ascending order where 1 is at the top left.
+"""The sliding game. The user gets to select an image and use it for a puzzle
 ---------------------------------------------------------------------------------------------------------------"""
 # Import necessary modules
 import random
